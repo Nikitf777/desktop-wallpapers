@@ -30,6 +30,6 @@ def main [
 
     let updated = $cleaned ++ [{column0: $new_hash, column1: $url}]
 
-    ($updated | each { |entry| $"($entry.column0) ($entry.column1)" } | str join "\n") | save -f $file
+    ($updated | each { |entry| $"($entry.column0) ($entry.column1)" } | str join "\n") ++ "\n" | save -f $file
     print $"Successfully added: ($new_hash) ($url)"
 }
