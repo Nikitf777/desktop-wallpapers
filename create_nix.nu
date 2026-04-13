@@ -18,8 +18,7 @@ def main [
     let nix_output = [$'{ pkgs, lib, ... }:
 
 let
-  wallpapers = [
-($nix_entries)
+  wallpapers = [($nix_entries)
   ];
 
   wallpapersPackage = pkgs.runCommand "system-wallpapers" { } ''
