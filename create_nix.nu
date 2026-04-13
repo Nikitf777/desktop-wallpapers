@@ -16,7 +16,6 @@ def main [
     }'
     } | str join
     let nix_output = [$'{ pkgs, lib, ... }:
-
 let
   wallpapers = [($nix_entries)
   ];
